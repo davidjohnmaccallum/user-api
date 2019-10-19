@@ -11,3 +11,6 @@ build:
       username: $DOCKER_HUB_USERNAME
       password: $DOCKER_HUB_PASSWORD
       repository: $DOCKER_HUB_USERNAME/user-api
+    - script:
+        code: |
+            env
