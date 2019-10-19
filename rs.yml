@@ -1,19 +1,19 @@
 apiVersion: apps/v1beta2
 kind: ReplicaSet
 metadata:
-  name: web-rs
+  name: user-api-rs
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: user-api
   template:
     metadata:
       labels:
-        app: hello-world
+        app: user-api
     spec:
       containers:
-      - name: hello-ctr
-        image: nigelpoulton/k8sbook:latest
+      - name: user-api
+        image: davidjohnmac/user-api
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
