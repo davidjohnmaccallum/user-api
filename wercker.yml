@@ -12,6 +12,8 @@ build:
       password: $DOCKER_HUB_PASSWORD
       repository: $DOCKER_HUB_USERNAME/user-api
       tag: $WERCKER_GIT_COMMIT, latest
+deploy-to-dev:
+  steps:
     - script:
         code: |
             env
