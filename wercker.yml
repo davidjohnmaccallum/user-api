@@ -17,8 +17,4 @@ build:
 deploy-to-dev:
   steps:
     - kubectl:
-      server: $KUBERNETES_MASTER
-      username: $KUBERNETES_USERNAME
-      password: $KUBERNETES_PASSWORD
-      insecure-skip-tls-verify: true
       command: apply -f k8s/dev-deploy.yml --record
