@@ -14,6 +14,9 @@ build:
       tag: $WERCKER_GIT_COMMIT, latest
 deploy-to-dev:
   steps:
-    - script:
-        code: |
-            env
+    - kubectl:
+      server: $KUBERNETES_MASTER
+      username: $KUBERNETES_USERNAME
+      password: $KUBERNETES_PASSWORD
+      insecure-skip-tls-verify: true
+      command: apply -f k8s/dev-deploy.yml --record
