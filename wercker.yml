@@ -1,4 +1,8 @@
-box: davidjohnmac/k8s-deployer
+box:
+  id: davidjohnmac/k8s-deployer
+  username: $DOCKER_HUB_USERNAME
+  password: $DOCKER_HUB_PASSWORD
+  tag: latest
 build:
   steps:
     - internal/docker-build:
