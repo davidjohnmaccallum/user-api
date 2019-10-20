@@ -1,8 +1,6 @@
-box: node
+box: davidjohnmac/k8s-deployer
 build:
   steps:
-    - npm-install
-    - npm-test
     - internal/docker-build:
       dockerfile: Dockerfile
       image-name: user-api
