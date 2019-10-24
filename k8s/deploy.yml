@@ -20,6 +20,5 @@ spec:
     spec:
       containers:
       - name: user-api
-        image: davidjohnmac/user-api:latest
         ports:
         - containerPort: 3000
