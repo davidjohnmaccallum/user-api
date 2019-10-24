@@ -17,4 +17,5 @@ build:
 deploy-to-dev:
   steps:
     - kubectl:
-      command: apply -f k8s/dev-deploy.yml --record
+      image: davidjohnmac/user-api:$WERCKER_GIT_COMMIT
+      command: apply -f k8s/deploy.yml --record
